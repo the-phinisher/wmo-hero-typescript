@@ -12,7 +12,7 @@ const Home = () => {
 		<div className="home">
 			{error && <div>{error}</div>}
 			{isPending && <div>Loading...</div>}
-			{!isPending && (
+			{!isPending && heroes && (
 				<HeroesList
 					heroes={heroes.filter((hero: any) => hero.id < 5)}
 					title="Top heroes!"
